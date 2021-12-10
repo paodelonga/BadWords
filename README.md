@@ -1,8 +1,7 @@
-<!---
+
 <p align="center">
-<img src="https://github.com/paodelonga/Badwords_generator/blob/main/Img/Header.png" alt="GEIAT" align="center" height="100"/>
-</p>
--->
+<img src="https://github.com/paodelonga/Badwords_generator/blob/main/ico.png" alt="BadWords" align="center" height="100"/>
+
 
 # Badwords
  Badwords :D
