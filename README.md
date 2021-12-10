@@ -1,12 +1,12 @@
 
 <p align="center">
-<img src="https://github.com/paodelonga/Badwords_generator/blob/main/ico.png" alt="BadWords" align="center" height="100"/>
+<img src="https://github.com/paodelonga/Badwords_generator/blob/main/ico.png" alt="BadWords" align="center" height="150"/>
 
 
 # Badwords
  Badwords :D
 ### About
-Create a variation of words from a list.
+Create a variation of words from a list. <br>
 you can use your own list or use the predefined one with ~230 words.
 
 ### Install
