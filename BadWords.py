@@ -26,7 +26,7 @@ class App():
 
 	try:
 		ask = input(
-			"Caso não sua lista sera usada uma lista com ~230 palavras.\n"
+			"Caso não use uma lista própria será usada a lista padrão com ~230 palavras.\n"
 			"Deseja usar sua lista de palavras? S/N")
 	except KeyboardInterrupt as ex:
 		App()
