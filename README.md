@@ -7,7 +7,7 @@
  Badwords :D
 ### About
 Create a variation of words (Badwords) from a list. <br>
-you can use your own list or use the predefined one with ~230 words.
+you can use your own list or use the predefined one with ~290 words.
 
 ### Install
 
