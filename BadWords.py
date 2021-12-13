@@ -318,7 +318,8 @@ class App():
 	print("Os arquivos foram salvos na pasta de execução do programa :)\n"
 		"da uma olhada lá\n\n"
 		"Qualquer coisa me contacta:\n"
-		"https://github.com/paodelonga")
+		"https://github.com/paodelonga"
+		"Discord: ABi#1688")
 	sleep(15)
 	sys.exit()
 if __name__ == '__main__':
