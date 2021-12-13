@@ -2,9 +2,13 @@ import io
 import os
 import platform
 import sys
-from time import sleep
 import tkinter as tk
+
+from colorama import Back
+from colorama import Fore
+from colorama import Style
 from tempfile import gettempdir
+from time import sleep
 from tkinter import filedialog
 
 
@@ -20,15 +24,21 @@ class App():
 
 
 	if platform.system() == "Windows":
-		os.system("cls")
+		def clear():
+			os.system("cls")
 	elif platform.system() == "Linux" or "Mac" in platform.system():
-		os.system("clear")
+		def clear():
+			os.system("clear")
 
 	try:
-		ask = input(
-			"Caso não use uma lista própria será usada a lista padrão com ~230 palavras.\n"
-			"Deseja usar sua lista de palavras? S/N")
+		print(f"{Fore.BLUE}EN:{Fore.RESET} If you don't use your own list, the default list with ~280 words will be used.")
+		print(f"Want to use your word list? Y/N\n")
+		print(f"{Fore.GREEN}PT:{Fore.RESET} Caso não use uma lista própria será usada a lista padrão com ~280 palavras.")
+		print(f"Deseja usar sua lista de palavras? S/N\n{Fore.RED}")
+		ask = input("cmd > ")
+		print(Fore.RESET)
 	except KeyboardInterrupt as ex:
+		print(Fore.RESET)
 		App()
 
 	if ask in Dict["Yes"]:
@@ -36,8 +46,8 @@ class App():
 		file = file.split()
 
 	elif ask in Dict["No"]:
-		os.system(f"curl https://transfer.sh/nyXCju/palavr%C3%B5es.txt --output {gettempdir()}/badword.txt")
-		file = io.open(f"{gettempdir()}/badword.txt","r",encoding="UTF-8").read()
+		os.system(f"curl https://raw.githubusercontent.com/paodelonga/Badwords_generator/main/database/words.txt --output {gettempdir()}/words.txt")
+		file = io.open(f"{gettempdir()}/words.txt","r",encoding="UTF-8").read()
 		file = file.split()
 	else:
 		App()
@@ -315,13 +325,19 @@ class App():
 
 	VerticalFile()
 	HorizontalFile()
-	print("Os arquivos foram salvos na pasta de execução do programa :)\n"
-		"da uma olhada lá\n\n"
-		"Qualquer coisa me contacta:\n"
-		"https://github.com/paodelonga"
-		"Discord: ABi#1688")
+	clear()
+	print(f"{Fore.BLUE}EN:{Fore.RESET} The files were saved in the program's execution folder :)\n"
+		f"take a look there\n"
+		f"anything contact me\n\n"
+		f"{Fore.GREEN}PT:{Fore.RESET} Os arquivos foram salvos na pasta de execução do programa :)\n"
+		f"da uma olhada lá\n"
+		f"Qualquer coisa me contacta\n\n"
+		f"Discord: ABi#1688\n"
+		f"https://www.github.com/paodelonga\n")
 	sleep(15)
+	try:
+		os.remove(f"{gettempdir()}/words.txt")
+	except:
+		pass
 	sys.exit()
-if __name__ == '__main__':
-	Application = App()
-	App()
+App()

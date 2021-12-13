@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="https://github.com/paodelonga/Badwords_generator/blob/main/ico.png" alt="BadWords" align="center" height="150"/>
+<img src="https://github.com/paodelonga/Badwords_generator/blob/main/assets/ico.png" alt="BadWords" align="center" height="150"/>
 
 
 # Badwords
