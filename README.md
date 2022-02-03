@@ -19,4 +19,5 @@ for Windows download a BadWords.exe and run it.<br>
 for Linux download a BadWords and run it with terminal<br>
 do `chmod +x BadWords & ./BadWords`
  
-
+### License
+FOQCEP! (FAÇA OQUE QUISER COM ESTA PORRA!)
