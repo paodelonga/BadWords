@@ -174,6 +174,8 @@ class App():
 			c.write('\n')
 		c.close()
 		if isfile('converted_vertical.txt'):
+			data = str(io.open('converted_vertical.txt', 'r').read()).rstrip()
+			io.open('converted_vertical.txt', 'w').write(data)
 			try:
 				rename('converted_vertical.txt', f"converted_vertical_{len((io.open('converted_vertical.txt', 'r').read()).split())}_words.txt")
 			except FileExistsError:
@@ -313,9 +315,10 @@ class App():
 			chacount = chacount + 1
 			c.write(b.upper())
 			c.write(' ')
-
 		c.close()
 		if isfile('converted_horizontal.txt'):
+			data = str(io.open('converted_horizontal.txt', 'r').read()).rstrip()
+			io.open('converted_horizontal.txt', 'w').write(data)
 			try:
 				rename('converted_horizontal.txt', f"converted_horizontal_{len((io.open('converted_horizontal.txt', 'r').read()).split())}_words.txt")
 			except FileExistsError:
